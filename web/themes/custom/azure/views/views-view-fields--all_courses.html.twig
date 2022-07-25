@@ -1,0 +1,27 @@
+
+         <div class="item">
+             {{ fields.field_course_image.content }}
+              <img src="{{ fields.field_course_image.content }}" alt="Course One">
+              <div class="down-content">
+                <h4>  {{ fields.body.content }}   </h4>
+                  
+                <div class="info">
+                  <div class="row">
+                    <div class="col-8">
+                      <ul>
+                          {{ fields._entity.field_rating.content  }}
+                          {% set x = fields.field_rating.content|trim %}
+                        {% for i in  1..x %}
+                                                <li><i class="fa fa-star"></i></li>
+
+                        {% endfor %}
+
+                      </ul>
+                    </div>
+                    <div class="col-4">
+                       <span>${{ fields.field_course_price.content }} </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>

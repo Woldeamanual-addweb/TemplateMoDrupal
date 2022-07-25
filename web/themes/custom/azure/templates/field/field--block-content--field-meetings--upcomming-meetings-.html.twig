@@ -51,7 +51,7 @@
             <div class="meeting-item">
               <div class="thumb">
                 <div class="price">
-                  <span>${{ item.content[1] }}</span>
+                  <span>${{ item.content.field_meeting_date.content }}</span>
                 </div>
                 <a href="meeting-details.html"><img src="themes/custom/azure/images/meeting-01.jpg"
                     alt="New Lecturer Meeting"></a>
@@ -71,7 +71,7 @@
     </div>
     </div>
   {% else %}
-    {% for item in items %}
+    {# {% for item in items %}
       <div class="col-lg-6">
             <div class="meeting-item">
               <div class="thumb">
@@ -92,7 +92,7 @@
               </div>
             </div>
           </div>
-    {% endfor %}
+    {% endfor %} #}
   {% endif %}
 {% else %}
   <div{{ attributes }}>

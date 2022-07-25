@@ -30,22 +30,19 @@
  * @see template_preprocess_views_view()
  */
 #}
-           <div class="col-lg-12">
-              <div class="row grid">
 
-{% for row in rows %}
-    {{ row.content }}
-{% endfor %}
+<div class="col-lg-12">
+    <div class="filters">
+      <ul>
+        {% for row in rows %}
+                <li data-filter="{{ row['content']['#row']._entity.field_filter_class.value }}" >{{ row['content']['#row']._entity.field_filter_title.value|raw }}</li>
 
- </div>
-            </div>
-            <div class="col-lg-12">
-            
-            </div>
-          </div>
-        </div>
-      </div>
+        {% endfor %}
+  
+      </ul>
     </div>
+</div>
+
 
 
 

@@ -1,0 +1,20 @@
+        <div class="col-lg-4 templatemo-item-col all att soon">
+                  <div class="meeting-item">
+                    <div class="thumb">
+                      <div class="price">
+
+                        <span>${{ fields.field_price.content }}  </span>
+                      </div>
+
+                      <a href="http://localhost/web/themeexc/web/node/{{ _entity.id }}"><img src="{{ fields.field_meeting_image.content }}" alt=""></a>
+                    </div>
+                    <div class="down-content">
+                      <div class="date">
+                        <h6>{{ fields.field_meeting_date.content|date('F')  }} <span> {{ fields.field_meeting_date.content|date('d')  }}</span></h6>
+                      </div>
+                  <h4>{{ fields.body.content | raw }} </h4>
+                     
+                    </div>
+            </div>
+</div>
+
